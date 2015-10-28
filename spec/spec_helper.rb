@@ -1,11 +1,11 @@
 ENV['RACK_ENV'] = 'test'
 
-require_relative File.join('..', 'app')
+require_relative File.join('..', 'app/app')
 
 RSpec.configure do |config|
   include Rack::Test::Methods
 
   def app
-    SimpleApp
+    ReplaceWithName
   end
 end
